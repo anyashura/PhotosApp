@@ -8,13 +8,13 @@
 import UIKit
 
 class UserViewController: UIViewController {
-    
+
     var user: User!
 
     @IBOutlet private weak var cityLabel: UILabel!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var userView: UIImageView!
-   
+
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = user.name
