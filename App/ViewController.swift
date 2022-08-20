@@ -70,7 +70,9 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "FullScreenPhotoViewController") as? FullScreenPhotoViewController {
+        if let vc = storyboard?.instantiateViewController(
+            withIdentifier: "FullScreenPhotoViewController"
+        ) as? FullScreenPhotoViewController {
             vc.photoGallery = photoGallery
             vc.indexPath = indexPath
             self.navigationController?.pushViewController(vc, animated: true)

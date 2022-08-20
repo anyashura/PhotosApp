@@ -21,25 +21,39 @@ class FullScreenPhotoViewController: UIViewController {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.performBatchUpdates(nil) { (_) in self.collectionView.scrollToItem(at: self.indexPath, at: UICollectionView.ScrollPosition.centeredHorizontally, animated: false)
+        collectionView.performBatchUpdates(nil) { _ in
+            self.collectionView.scrollToItem(
+                at: self.indexPath,
+                at: UICollectionView.ScrollPosition.centeredHorizontally,
+                animated: false
+            )
         }
     }
 }
 
-extension FullScreenPhotoViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension FullScreenPhotoViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photoGallery.images.count
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? FullScreenCollectionViewCell
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
+
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: identifier,
+            for: indexPath
+        ) as? FullScreenCollectionViewCell
         else { return UICollectionViewCell() }
         cell.photoView.image = photoGallery.images[indexPath.item]
 
         return cell
     }
+}
 
+extension FullScreenPhotoViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -49,5 +63,4 @@ extension FullScreenPhotoViewController: UICollectionViewDataSource, UICollectio
 
         return CGSize(width: widthOfCell, height: heightOfCell)
     }
-
 }

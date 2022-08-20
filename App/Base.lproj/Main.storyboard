@@ -317,7 +317,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uvh-RJ-Coi">
-                                                    <rect key="frame" x="190" y="19" width="144" height="34"/>
+                                                    <rect key="frame" x="302" y="19" width="32" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
@@ -332,7 +332,7 @@
                                                 <constraint firstItem="G6a-nJ-FZZ" firstAttribute="top" secondItem="wlB-7q-hds" secondAttribute="topMargin" constant="15" id="7Dk-qI-IKd"/>
                                                 <constraint firstAttribute="trailing" secondItem="Uvh-RJ-Coi" secondAttribute="trailing" constant="54" id="Jne-qi-E9m"/>
                                                 <constraint firstAttribute="trailing" secondItem="Uvh-RJ-Coi" secondAttribute="trailing" constant="54" id="NQ1-JZ-BXg"/>
-                                                <constraint firstItem="Uvh-RJ-Coi" firstAttribute="leading" secondItem="G6a-nJ-FZZ" secondAttribute="trailing" constant="100" id="T07-Jh-JPs"/>
+                                                <constraint firstItem="Uvh-RJ-Coi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G6a-nJ-FZZ" secondAttribute="trailing" constant="8" symbolic="YES" id="T07-Jh-JPs"/>
                                                 <constraint firstItem="G6a-nJ-FZZ" firstAttribute="leading" secondItem="wlB-7q-hds" secondAttribute="leadingMargin" constant="20" id="VHX-yK-LTB"/>
                                                 <constraint firstItem="G6a-nJ-FZZ" firstAttribute="leading" secondItem="wlB-7q-hds" secondAttribute="leading" constant="40" id="c9n-Fa-Hmq"/>
                                                 <constraint firstItem="Uvh-RJ-Coi" firstAttribute="top" secondItem="wlB-7q-hds" secondAttribute="topMargin" constant="8" id="cKd-kH-TOl"/>
@@ -453,7 +453,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JQ-BY-m58">
-                                <rect key="frame" x="188" y="559" width="52" height="20.333333333333371"/>
+                                <rect key="frame" x="188" y="559" width="41.333333333333343" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -467,7 +467,7 @@
                             <constraint firstItem="Ffm-Fa-Kpg" firstAttribute="centerY" secondItem="phr-X4-ZoU" secondAttribute="centerY" constant="42.333333333333371" id="8s2-hE-7Pp"/>
                             <constraint firstItem="Ffm-Fa-Kpg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HCd-R2-aq9" secondAttribute="leading" id="EQz-Vy-gpM"/>
                             <constraint firstItem="HCd-R2-aq9" firstAttribute="bottom" secondItem="7JQ-BY-m58" secondAttribute="bottom" constant="263.66666666666663" id="JnP-Jr-vXy"/>
-                            <constraint firstItem="Ffm-Fa-Kpg" firstAttribute="trailing" secondItem="7JQ-BY-m58" secondAttribute="trailing" id="Yuq-sK-3Tc"/>
+                            <constraint firstItem="Ffm-Fa-Kpg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7JQ-BY-m58" secondAttribute="trailing" id="Yuq-sK-3Tc"/>
                             <constraint firstItem="Ffm-Fa-Kpg" firstAttribute="top" secondItem="xXD-vd-ja5" secondAttribute="bottom" constant="8" id="gVR-k5-vyg"/>
                             <constraint firstItem="Ffm-Fa-Kpg" firstAttribute="leading" secondItem="7JQ-BY-m58" secondAttribute="leading" id="vlS-IT-0OU"/>
                             <constraint firstItem="xXD-vd-ja5" firstAttribute="leading" secondItem="HCd-R2-aq9" secondAttribute="leading" constant="94" id="wUO-IC-OR9"/>
