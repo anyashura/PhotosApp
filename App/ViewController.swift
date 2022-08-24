@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         profileItem.titleView?.backgroundColor = .green
         profileAvatar.layer.borderWidth = 3.0
         profileAvatar.layer.borderColor = UIColor.gray.cgColor
-        profileAvatar.layer.cornerRadius = 70
+        profileAvatar.layer.cornerRadius = 48
         profileAvatar.backgroundColor = .white
 
         photosView.dataSource = self
@@ -36,11 +36,16 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        profileNameLabel.text = UserDefaults.standard.string(forKey: "nameKey")
+
+        if UserDefaults.standard.string(forKey: "nameKey") != nil {
+            profileNameLabel.text = UserDefaults.standard.string(forKey: "nameKey")
+        } else {
+            profileNameLabel.text = "Person"
+        }
     }
 }
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photoGallery.images.count
@@ -70,12 +75,12 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let vc = storyboard?.instantiateViewController(
+        if let chooseVC = storyboard?.instantiateViewController(
             withIdentifier: "FullScreenPhotoViewController"
         ) as? FullScreenPhotoViewController {
-            vc.photoGallery = photoGallery
-            vc.indexPath = indexPath
-            self.navigationController?.pushViewController(vc, animated: true)
+            chooseVC.photoGallery = photoGallery
+            chooseVC.indexPath = indexPath
+            self.navigationController?.pushViewController(chooseVC, animated: true)
         }
     }
 }

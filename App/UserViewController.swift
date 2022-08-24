@@ -21,7 +21,7 @@ class UserViewController: UIViewController {
         cityLabel.text = user.city
         userView.image = user.image
         userView.layer.borderWidth = 3.0
-        userView.layer.cornerRadius = 120
+        userView.layer.cornerRadius = 60
         userView.clipsToBounds = true
         if user.gender == .male {
             userView.layer.borderColor = UIColor.blue.cgColor
