@@ -18,6 +18,14 @@ class FullScreenCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate {
         self.scrollView.delegate = self
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 3.6
+
+//        let widthScale = photoView.bounds.width
+//        let heightScale = photoView.bounds.height
+//        let minScale = min(widthScale, heightScale)
+//
+//        scrollView.minimumZoomScale = minScale
+//        scrollView.zoomScale = minScale
+
     }
 
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
