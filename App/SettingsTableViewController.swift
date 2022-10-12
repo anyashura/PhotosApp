@@ -8,11 +8,11 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
-    
+
     @IBOutlet private weak var nameField: UITextField!
     @IBOutlet private weak var soundsSwitch: UISwitch!
     @IBOutlet private weak var volumeSlider: UISlider!
-    
+
     private let nameKey = "nameKey"
     private let soundsKey = "soundsKey"
     private let volumeKey = "volumeKey"
@@ -25,16 +25,16 @@ class SettingsTableViewController: UITableViewController {
         soundsSwitch.isOn = UserDefaults.standard.bool(forKey: soundsKey)
         volumeSlider.value = UserDefaults.standard.float(forKey: volumeKey)
     }
-    
+
     @IBAction private func changeNameAction(_ sender: UITextField) {
         let nameText = sender.text
         UserDefaults.standard.set(nameText, forKey: nameKey)
     }
-    
+
     @IBAction private func changeSoundsAction(_ sender: UISwitch) {
         UserDefaults.standard.set(sender.isOn, forKey: soundsKey)
     }
-    
+
     @IBAction private func changeVolumeAction(_ sender: UISlider) {
         UserDefaults.standard.set(sender.value, forKey: volumeKey)
     }

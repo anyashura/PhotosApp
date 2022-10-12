@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 class ImagesForGallery {
-    
+
     var images = [UIImage]()
     init() {
-        for i in 1...12 {
-            let image = UIImage(named: "IMG_\(i)")!
+        for index in 1...12 {
+            let image = UIImage(named: "IMG_\(index)")!
             images.append(image)
         }
     }
